@@ -10,9 +10,11 @@ namespace Aula02
         private void btnConverter_Click(object sender, EventArgs e)
         {
             if ( this.cboTipoConversao.SelectedIndex== 0 )
+                //selectec index significa a lista, começa pelo 0.
             {
                 float kilo = 0 ;
                  if (float.TryParse(txtValorOriginal.Text, out kilo) )
+                    //tryparse, tenta fazer parse. 
                 {
 
                     float libras = (float)(kilo * 2.20462);
@@ -46,6 +48,11 @@ namespace Aula02
             {
                 MessageBox.Show("Selecione o tipo de conversão!");
             }
+        }
+
+        private void cboTipoConversao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
